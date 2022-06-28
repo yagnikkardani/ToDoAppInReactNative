@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { SafeAreaView, FlatList, StyleSheet, StatusBar, Text, View } from 'react-native';
 
 const TodoList = ({ todoList, handleDelete }) => {
-
+    // renderItem will dispay each item in the list.
+    // It will set the style according to the value of isCompleted.
     const renderItem = ({ item }) => (
         <View style={styles.item}>
             {console.log(todoList)}
@@ -12,7 +13,8 @@ const TodoList = ({ todoList, handleDelete }) => {
             }
         </View>
     );
-
+    // Here we are returning the whole list using FlatList core component of React Native.
+    // SafeAreaView is also a core component of React Native.
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
@@ -23,7 +25,7 @@ const TodoList = ({ todoList, handleDelete }) => {
         </SafeAreaView>
     );
 }
-
+// This is how we can set style in React Native.
 const styles = StyleSheet.create({
     container: {
         flex: 1,
