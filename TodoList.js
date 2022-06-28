@@ -14,7 +14,7 @@ const TodoList = ({ todoList, handleDelete }) => {
         </View>
     );
     // Here we are returning the whole list using FlatList core component of React Native.
-    // SafeAreaView is also a core component of React Native.
+    // SafeAreaView is a core component of iOS, so currently supported only on iOS devices.
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
